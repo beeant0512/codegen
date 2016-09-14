@@ -34,7 +34,6 @@ class db
         if ($this->conn->connect_error) {
             die("连接失败: " . $this->conn->connect_error);
         }
-        echo "连接成功";
         $this->conn->query("SET NAMES UTF8");
         $this->tables();
     }

@@ -7,5 +7,4 @@
  */
 
 $config = new stdClass();
-$config->src = "E:\\Beeant\\Desktop\\codegen\\src";
 $config->dto = 'com.changan.carbond.facade.dto';
