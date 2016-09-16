@@ -48,7 +48,7 @@
                     ?>
                     <div class="item ui checkbox">
                         <input type="checkbox" name="checkedTable[]">
-                        <label><a><?php echo $table->getName(); ?></a></label>
+                        <label><a href="#" class="tableName"><?php echo $table->getName(); ?></a></label>
                     </div>
                     <?php
                 }
@@ -70,5 +70,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('.tableName').on('click', function () {
+        var tableName = $(this).html();
+        $.ajax({
+            url: './www/gen/dto.php',
+            data: {table: tableName},
+            success: function () {
+
+            }
+        })
+    })
+</script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <?php
 /**
  * User: xiaobiao
@@ -14,6 +13,9 @@ require "gen/genDto.php";
 
 if ($_POST) {
     $db = new db($_POST['host'], $_POST['username'], $_POST['password'], $_POST['database']);
+    session_start();
+    // store session data
+    $_SESSION['db'] = serialize($db);
     include "www/db.php";
 } else {
     include "www/login.html";
